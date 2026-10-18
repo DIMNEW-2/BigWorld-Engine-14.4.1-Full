@@ -17,5 +17,10 @@ patch mongo_cxx_driver/src/mongo/client/connpool.h < ./mongo_cxx_driver.patch
 # Step 3: build the library. cpppath points to boost source directory for header
 # including, and libpath is path to built boost library files.
 cd mongo_cxx_driver/
-scons --c++11=C++11 --full --use-system-boost --prefix=$PWD/../build --libpath=../../boost/build/lib --cpppath=../../boost/boost_1_54_0
+# SCons evaluates include/library paths relative to its variant build directory,
+# so pass absolute paths for Boost rather than the relative paths above.
+BOOST_ROOT="$(cd ../../boost && pwd)"
+scons --c++11=C++11 --full --use-system-boost --prefix="$PWD/../build" \
+	--libpath="$BOOST_ROOT/build/lib" \
+	--cpppath="$BOOST_ROOT/boost_1_54_0"
 

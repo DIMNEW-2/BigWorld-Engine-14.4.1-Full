@@ -35,6 +35,15 @@ Python 2.7 и зависимости из `NOTE`/`Dockerfile`. В корне р�
 ./tools/build_server.sh debug
 ```
 
+Перед первым полным `make` нужно один раз собрать встроенные библиотеки Boost
+и MongoDB C++ driver: BigWorld Makefile ссылается на их готовые файлы, но сам
+их не собирает. Пошаговые команды находятся в
+`programming/bigworld/third_party/mongodb/{boost,mongo_cxx_driver}/README.BigWorld`.
+При сборке MongoDB передавайте абсолютные `--libpath` и `--cpppath`, как в
+обновлённом README: SCons разрешает относительные пути от своего variant build
+каталога. Иначе компиляция может остановиться на `boost/shared_ptr.hpp` или
+линковке `-lmongoclient` / `-lboost_*`.
+
 Скрипт проверяет платформу и версию Python до запуска `make`. `hybrid` кладёт
 серверные бинарники в `game/bin/server/el7/server`, `debug` — в
 `game/bin/server/el7_debug/server`. Затем после настройки/запуска `bwmachined2`
