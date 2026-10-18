@@ -1,0 +1,1 @@
+"""Shared TankArena server rules."""

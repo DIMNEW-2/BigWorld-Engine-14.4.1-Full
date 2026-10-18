@@ -1,0 +1,98 @@
+<root>
+  <Properties>
+    <accountName>
+      <Type> UNICODE_STRING </Type>
+      <Flags> BASE_AND_CLIENT </Flags>
+      <Persistent> true </Persistent>
+      <DatabaseLength> 100 </DatabaseLength>
+      <Identifier> true </Identifier>
+    </accountName>
+
+    <vehicleCode>
+      <Type> STRING </Type>
+      <Flags> BASE </Flags>
+      <Default> medium </Default>
+      <Persistent> false </Persistent>
+    </vehicleCode>
+  </Properties>
+
+  <ClientMethods>
+    <onBattleSnapshot>
+      <Args>
+        <snapshot> PYTHON </snapshot>
+      </Args>
+    </onBattleSnapshot>
+    <onBattleEvent>
+      <Args>
+        <event> PYTHON </event>
+      </Args>
+    </onBattleEvent>
+  </ClientMethods>
+
+  <BaseMethods>
+    <setVehicle>
+      <Exposed/>
+      <Args>
+        <vehicle_code> STRING </vehicle_code>
+      </Args>
+    </setVehicle>
+    <setReady>
+      <Exposed/>
+      <Args>
+        <is_ready> BOOL </is_ready>
+      </Args>
+    </setReady>
+    <startBattle>
+      <Exposed/>
+      <Args>
+        <team_one_size> UINT8 </team_one_size>
+        <team_two_size> UINT8 </team_two_size>
+        <fill_bots> BOOL </fill_bots>
+      </Args>
+    </startBattle>
+    <deliverBattleSnapshot>
+      <Args>
+        <snapshot> PYTHON </snapshot>
+      </Args>
+    </deliverBattleSnapshot>
+    <deliverBattleEvent>
+      <Args>
+        <event> PYTHON </event>
+      </Args>
+    </deliverBattleEvent>
+    <resetBattle>
+      <Exposed/>
+    </resetBattle>
+    <submitInput>
+      <Exposed/>
+      <Args>
+        <sequence> UINT32 </sequence>
+        <throttle> FLOAT </throttle>
+        <steering> FLOAT </steering>
+      </Args>
+    </submitInput>
+    <submitAim>
+      <Exposed/>
+      <Args>
+        <sequence> UINT32 </sequence>
+        <relative_yaw> FLOAT </relative_yaw>
+        <pitch> FLOAT </pitch>
+      </Args>
+    </submitAim>
+    <fire>
+      <Exposed/>
+      <Args>
+        <sequence> UINT32 </sequence>
+      </Args>
+    </fire>
+    <requestSnapshot>
+      <Exposed/>
+    </requestSnapshot>
+    <leaveBattle>
+      <Exposed/>
+    </leaveBattle>
+  </BaseMethods>
+
+  <CellMethods>
+  </CellMethods>
+</root>

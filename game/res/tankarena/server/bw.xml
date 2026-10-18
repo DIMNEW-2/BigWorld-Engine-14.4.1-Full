@@ -1,0 +1,14 @@
+<root>
+  <personality> TankArena </personality>
+  <parentFile> server/development_defaults.xml </parentFile>
+
+  <billingSystem>
+    <shouldAcceptUnknownUsers> true </shouldAcceptUnknownUsers>
+    <shouldRememberUnknownUsers> false </shouldRememberUnknownUsers>
+    <entityTypeForUnknownUsers> TankPlayer </entityTypeForUnknownUsers>
+  </billingSystem>
+
+  <db>
+    <type> xml </type>
+  </db>
+</root>
