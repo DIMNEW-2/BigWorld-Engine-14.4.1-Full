@@ -32,6 +32,8 @@ To start with this project you will need at least the following software:
 Server installation instructions are located in a separate [Server Installation Guide](<docs/pdf/Server Installation Guide.pdf>) document.
 Server build instructions can be found in [Server Build Guide](<docs/pdf/Server Build Guide.pdf>).
 
+A step-by-step guide for the Docker server workflow, Windows WorldEditor build, and preparation of client `res` assets is available in [Docker: WorldEditor, BigWorld server и ресурсы клиента](docs/DOCKER_WORLD_EDITOR_SERVER_RESOURCES.md). The existing CentOS Dockerfile is for the Linux server; WorldEditor requires a Windows/MSVC toolchain.
+
 ## Experimental offline battle-server sample
 
 An opt-in BigWorld `ServiceApp` prototype with server-authoritative lobby,
