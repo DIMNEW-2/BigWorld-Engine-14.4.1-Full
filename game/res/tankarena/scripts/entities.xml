@@ -1,0 +1,7 @@
+<root>
+  <ClientServerEntities>
+    <TankPlayer/>
+  </ClientServerEntities>
+  <ServerOnlyEntities>
+  </ServerOnlyEntities>
+</root>

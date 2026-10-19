@@ -1,0 +1,5 @@
+<root>
+  <!-- BigWorld sample entity definitions use these project-level aliases. -->
+  <OBJECT_ID> INT32 </OBJECT_ID>
+  <BOOL> UINT8 </BOOL>
+</root>

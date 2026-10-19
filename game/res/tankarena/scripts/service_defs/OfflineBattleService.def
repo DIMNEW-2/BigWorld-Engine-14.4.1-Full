@@ -1,0 +1,99 @@
+<root>
+  <Methods>
+    <join>
+      <Args>
+        <player_id> OBJECT_ID </player_id>
+        <display_name> UNICODE_STRING </display_name>
+        <vehicle_code> STRING </vehicle_code>
+        <player_mailbox> MAILBOX </player_mailbox>
+      </Args>
+      <ReturnValues>
+        <response> PYTHON </response>
+      </ReturnValues>
+    </join>
+    <leave>
+      <Args>
+        <player_id> OBJECT_ID </player_id>
+      </Args>
+      <ReturnValues>
+        <response> PYTHON </response>
+      </ReturnValues>
+    </leave>
+    <setVehicle>
+      <Args>
+        <player_id> OBJECT_ID </player_id>
+        <vehicle_code> STRING </vehicle_code>
+      </Args>
+      <ReturnValues>
+        <response> PYTHON </response>
+      </ReturnValues>
+    </setVehicle>
+    <setReady>
+      <Args>
+        <player_id> OBJECT_ID </player_id>
+        <is_ready> BOOL </is_ready>
+      </Args>
+      <ReturnValues>
+        <response> PYTHON </response>
+      </ReturnValues>
+    </setReady>
+    <startBattle>
+      <Args>
+        <player_id> OBJECT_ID </player_id>
+        <team_one_size> UINT8 </team_one_size>
+        <team_two_size> UINT8 </team_two_size>
+        <fill_bots> BOOL </fill_bots>
+      </Args>
+      <ReturnValues>
+        <response> PYTHON </response>
+      </ReturnValues>
+    </startBattle>
+    <resetBattle>
+      <Args>
+        <player_id> OBJECT_ID </player_id>
+      </Args>
+      <ReturnValues>
+        <response> PYTHON </response>
+      </ReturnValues>
+    </resetBattle>
+    <submitInput>
+      <Args>
+        <player_id> OBJECT_ID </player_id>
+        <sequence> UINT32 </sequence>
+        <throttle> FLOAT </throttle>
+        <steering> FLOAT </steering>
+      </Args>
+      <ReturnValues>
+        <response> PYTHON </response>
+      </ReturnValues>
+    </submitInput>
+    <submitAim>
+      <Args>
+        <player_id> OBJECT_ID </player_id>
+        <sequence> UINT32 </sequence>
+        <relative_yaw> FLOAT </relative_yaw>
+        <pitch> FLOAT </pitch>
+      </Args>
+      <ReturnValues>
+        <response> PYTHON </response>
+      </ReturnValues>
+    </submitAim>
+    <fire>
+      <Args>
+        <player_id> OBJECT_ID </player_id>
+        <sequence> UINT32 </sequence>
+      </Args>
+      <ReturnValues>
+        <response> PYTHON </response>
+      </ReturnValues>
+    </fire>
+    <snapshot>
+      <Args>
+        <player_id> OBJECT_ID </player_id>
+      </Args>
+      <ReturnValues>
+        <response> PYTHON </response>
+      </ReturnValues>
+    </snapshot>
+  </Methods>
+</root>

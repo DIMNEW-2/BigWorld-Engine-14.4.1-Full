@@ -27,16 +27,14 @@ BW_BEGIN_NAMESPACE
 // Section: Interior interface
 // -----------------------------------------------------------------------------
 
-// clang++ \
-//  -E \
-//  -CC \
-//  -P \
-//  -Iprogramming/bigworld/lib/ \
-//  -DDEFINE_SERVER_HERE \
-//  -DDEFINE_INTERFACE_HERE \
-//  programming/bigworld/server/loginapp/login_int_interface.hpp | clang-format-21 > test.h
-//
-//
+/*
+ * Example preprocessor command:
+ * clang++ -E -CC -P -Iprogramming/bigworld/lib/ \
+ *   -DDEFINE_SERVER_HERE -DDEFINE_INTERFACE_HERE \
+ *   programming/bigworld/server/loginapp/login_int_interface.hpp |
+ *   clang-format-21 > test.h
+ */
+
 // namespace BW {
 // namespace LoginIntInterface {
 //   Mercury::InterfaceMinder gMinder("LoginIntInterface");
